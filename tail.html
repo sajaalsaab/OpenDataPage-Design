@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./dist/style.css">
+    <style>
+
+        .tabcontent {
+            display: none;}
+
+        .tab button.active {
+            color: #ccc;
+        }
+
+
+    </style>
 </head>
 <body class="bg-slate-700 ">
 <nav class="container bg-slate-700 mx-auto justify-between flex text-right pb-1 pt-1 items-center"><a
@@ -62,18 +73,18 @@
     </div>
 
 </div>
-<div class="bg-white h-15 pt-10 block flex justify-center">
-    <div class="">
-        <div class=" text-2xs py-1  text-center">
-            <button class="md:text-sm" onclick="tab1()"><span id="t1"
-                                                              class="inline p-1 ring-7  text-black ring-gray-350 hover:bg-gray-400  "> <svg
+<div class="bg-white h-15 pt-10 block flex justify-center tab">
+    <div>
+        <div class=" text-2xs py-1  text-center ">
+            <button class="md:text-sm tablinks" onclick="openContent(event, 'openData')"><span
+                                                              class="inline p-1 ring-7   ring-gray-350 hover:bg-gray-400 "> <svg
                     id="i1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-3 h-3 text-sky-700 md:w-4 md:h-4 inline ml-1">
   <path stroke-linecap="round" stroke-linejoin="round"
         d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"/>
 </svg>
 عن البيانات المفتوحة</span></button>
-            <button class="md:text-sm" onclick="tab2(this)"><span id="t2"
+            <button class="md:text-sm tablinks" onclick="openContent(event, 'dataLibrary')"><span
                                                                   class="inline p-1  ring-7 ring-gray-350 hover:bg-gray-400"><svg
                     id="i2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-3 h-3 text-sky-500 md:w-4 md:h-4 inline ml-1">
@@ -100,9 +111,9 @@
     </div>
 
 
-    <div id="output"
-         class="col-span-full grid grid-cols-2 gap-3 py-2 px-0 mx-12 mt-8 ring-1 ring-gray-100 shadow-md sm:mx-28 md:mx-36 lg:mx-44 xl:mx-56 2xl:mx-96 ">
-        <p class="h-4 col-span-full text-gray-750 mt-1 font-bold text-2xs mr-7 md:text-xs ">
+    <div id="openData"
+         class="tabcontent col-span-full grid grid-cols-2 gap-3 py-2 px-0 mx-12 mt-8 ring-1 ring-gray-100 shadow-md sm:mx-28 md:mx-36 lg:mx-44 xl:mx-56 2xl:mx-96 ">
+        <p class="h-4 col-span-full text-gray-750 mt-1 font-bold text-2xs mr-7 md:text-xs md:h-8">
             عن البيانات المفتوحة
         </p>
         <p class="col-span-full px-4 pb-3 text-gray-400 text-justify text-2xs mx-3  md:text-xs">
@@ -115,8 +126,8 @@
     </div>
 
 
-    <div id="output1"
-         class=" col-span-full grid grid-cols-2 gap-3 py-2 px-0 mx-12 mt-8 ring-1 ring-gray-100 shadow-md sm:mx-28 md:mx-36 lg:mx-44 xl:mx-56 2xl:mx-96 ">
+    <div id="dataLibrary"
+         class="tabcontent col-span-full grid grid-cols-2 gap-3 py-2 px-0 mx-12 mt-8 ring-1 ring-gray-100 shadow-md sm:mx-28 md:mx-36 lg:mx-44 xl:mx-56 2xl:mx-96 ">
         <p class="col-span-full h-4 text-gray-750 mt-1  font-bold text-2xs mr-7 md:text-xs ">
             بيانات أعضاء هيئة التدريس
         </p>
