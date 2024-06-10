@@ -1,2 +1,2 @@
 # Open Data Page
-- Open data page design at Qassim University portal using tailwindcss.
+- Design of the Open data page at the Qassim University portal using tailwindcss.
